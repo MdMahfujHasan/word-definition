@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Definitions</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #synonyms-container,
+        #antonyms-container {
+            display: none;
+        }
+
+        li {
+            background-color: #fff0ed;
+            margin: 10px;
+            padding: 6px;
+            list-style: circle;
+        }
+    </style>
+</head>
+<!-- border-solid border-2 border-rose-400 -->
+
+<body class="container mx-auto">
+    <div class="mb-2 flex justify-center items-center mt-2">
+        <input class="outline-0 p-2 w-3/12 border-2 border-rose-400 mr-2" id="input-word" type="text"
+            placeholder="Type a word, e.g. cat">
+        <button id="btn-search" class="px-6 py-2 text-white bg-rose-400">Definition</button>
+    </div>
+    <section id="details-container" class="w-2/3 py-2 pl-3 pr-2 mx-auto">
+        <div>
+            <div id="word-details" class="text-center">
+
+            </div>
+            <ul id="definition-container" class="text-left">
+
+            </ul>
+            <p id="synonyms-container" class="text-center bg-violet-100 m-2.5 1.5"><b>Synonym:</b> </p>
+            <p id="antonyms-container" class="text-center bg-violet-100 m-2.5 p-1.5"><b>Antonyms:</b> </p>
+            <div id="word-audio" class="flex items-center">
+
+            </div>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
